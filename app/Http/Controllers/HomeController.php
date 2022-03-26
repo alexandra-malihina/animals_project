@@ -28,24 +28,6 @@ class HomeController extends Controller
         $animals = Animal::query()
             ->get();
 
-        // $use_animals = [];
-        // // dd(Cookie::get());
-        // $cookie_god_id = Cookie::get('god_id');
-
-        // if (empty($cookie_user_id)) {
-        //     $cookie_god_id = uniqid();
-        // }
-
-        // Cookie::queue('god_id', $cookie_god_id, 10);
-        Cookie::queue('animals', '[]', 10);
-
-        return view(
-            'home',
-            [
-                'menu_data' => [
-                    'animals' => $animals
-                ]
-            ]
-        );
+        return view('home');
     }
 }
