@@ -5,3 +5,5 @@
 ```php artisan build:project```
 
 И насладитесь божественным симулятором!
+
+или посмотрите его работу на https://alex-mal.ru/animals_project/
