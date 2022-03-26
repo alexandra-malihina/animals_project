@@ -25,9 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $animals = Animal::query()
-            ->get();
-
         return view('home');
     }
 }
