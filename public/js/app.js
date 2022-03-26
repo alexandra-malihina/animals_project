@@ -5304,7 +5304,6 @@ __webpack_require__.r(__webpack_exports__);
         age: this.age
       };
       axios.post('/animals/age', data).then(function (res) {
-        console.log(res);
         _this2.age = res.data.data.age;
         _this2.size = res.data.data.size;
         _this2.progress = res.data.data.progress;
@@ -5447,19 +5446,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['data'],
   data: function data() {
     this.data['isActive'] = true;
     return this.data;
-  },
-  mounted: function mounted() {
-    // Как-то обрабатываем данные
-    console.log('mounted_animal_menu_item');
-    console.log(this.data);
   },
   methods: {
     addAnimal: function addAnimal(event) {
@@ -5467,17 +5458,9 @@ __webpack_require__.r(__webpack_exports__);
         return false;
       }
 
-      console.log('click' + this.name);
       this.isActive = false;
       event.target.classList.add('disabled');
       this.$parent.$parent.$refs.animal_blocks.addAnimal(this.id);
-      console.log(this.$parent, this.$parent.$parent.$refs.animal_blocks); // let data = {
-      //     animal_id: this.id
-      // };
-      // axios.post('/animal', data)
-      // .then(res => {
-      //     console.log(res);
-      // })
     }
   },
   computed: {
@@ -10674,7 +10657,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.wrapper[data-v-517aebc8] {\r\n  position: fixed;\r\n  top: 0px;\r\n  left: 0px;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  background-color: rgba(0, 0, 0, 0.7);\r\n  z-index: 1000;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.wrapper[data-v-517aebc8] {\n    position: fixed;\n    top: 0px;\n    left: 0px;\n    width: 100vw;\n    height: 100vh;\n    background-color: rgba(0, 0, 0, 0.7);\n    z-index: 1000;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

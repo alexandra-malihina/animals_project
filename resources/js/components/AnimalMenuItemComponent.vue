@@ -1,13 +1,10 @@
 <template>
-
-
     <div  v-on:click="addAnimal" :title=kind>
         <img :src=image class="menu_icon">
         <div >
             {{ name }}
         </div>
     </div>
-
 </template>
 
 <script>
@@ -17,29 +14,15 @@
             this.data['isActive'] = true;
             return this.data
         },
-        mounted () {
-            // Как-то обрабатываем данные
-            console.log('mounted_animal_menu_item');
-            console.log(this.data);
-        },
         methods: {
             addAnimal(event){
                 if (! this.isActive)
                 {
                     return false;
                 }
-                console.log('click' + this.name );
                 this.isActive = false;
                 event.target.classList.add('disabled');
                 this.$parent.$parent.$refs.animal_blocks.addAnimal(this.id);
-                console.log(this.$parent, this.$parent.$parent.$refs.animal_blocks);
-                // let data = {
-                //     animal_id: this.id
-                // };
-                // axios.post('/animal', data)
-                // .then(res => {
-                //     console.log(res);
-                // })
             }
         },
         computed: {

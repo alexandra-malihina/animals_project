@@ -37,7 +37,7 @@ export default {
 			};
 			axios.post('/animals/age', data)
 			.then(res => {
-				console.log(res);
+	
 				this.age = res.data.data.age;
 				this.size = res.data.data.size;
 				this.progress = res.data.data.progress;
